@@ -9,7 +9,7 @@
       console.log("attempting to close modal");
     }
     
-    const params = newUrlSearchParams(window.location.search);
+    const params = new UrlSearchParams(window.location.search);
     for (const param of params) {
       console.log(param);
     }
