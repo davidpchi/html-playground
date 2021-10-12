@@ -1,1 +1,7 @@
 <h1>Hello!</h1>
+<script>
+  function closeModal() {
+    window.parent.postMessage("closeModal");
+  }
+</script>
+<button onclick="closeModal()">Close</button>
