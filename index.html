@@ -8,6 +8,11 @@
       window.parent.postMessage("closeModal", "*");
       console.log("attempting to close modal");
     }
+    
+    const params = newUrlSearchParams(window.location.search);
+    for (const param of params) {
+      console.log(param);
+    }
   </script>
   </body>
 </html>
