@@ -2,6 +2,7 @@
 <script>
   function closeModal() {
     window.parent.postMessage("closeModal");
+    console.log("attempting to close modal");
   }
 </script>
 <button onclick="closeModal()">Close</button>
