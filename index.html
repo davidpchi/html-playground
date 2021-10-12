@@ -1,8 +1,12 @@
+<html>
+<body>
 <h1>Hello!</h1>
+<button onclick="closeModal()">Close</button>
 <script>
   function closeModal() {
     window.parent.postMessage("closeModal");
     console.log("attempting to close modal");
   }
 </script>
-<button onclick="closeModal()">Close</button>
+</body>
+</html>
