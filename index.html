@@ -9,6 +9,10 @@
       console.log("attempting to close modal");
     }
     
+    if(typeof URLSearchParams === 'undefined'){
+        URLSearchParams = require('url').URLSearchParams;
+    }
+    
     const params = new UrlSearchParams(window.location.search);
     for (const param of params) {
       console.log(param);
