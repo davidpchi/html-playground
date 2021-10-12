@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Hello!</h1>
-    <h2>This is the iteration 04</h2>
+    <h2>This is the iteration 05</h2>
   <button onclick="closeModal()">Close</button>
   <script>
     function closeModal() {
@@ -13,7 +13,7 @@
         URLSearchParams = require('url').URLSearchParams;
     }
     
-    const params = new UrlSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
     for (const param of params) {
       console.log(param);
     }
