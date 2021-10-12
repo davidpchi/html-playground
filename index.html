@@ -1,11 +1,11 @@
 <html>
   <body>
     <h1>Hello!</h1>
-    <h2>This is the iteration 01</h2>
+    <h2>This is the iteration 02</h2>
   <button onclick="closeModal()">Close</button>
   <script>
     function closeModal() {
-      window.parent.postMessage("closeModal");
+      window.parent.postMessage("closeModal", "*");
       console.log("attempting to close modal");
     }
   </script>
