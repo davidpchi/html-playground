@@ -81,7 +81,10 @@ h1{
     
     if (params.has("isFriend")) {
     	const isFriend = params.get("isFriend");
-      document.getElementById("friendButton").innerHTML= "Unfollow";
+      if (isFriend === "true") 
+        document.getElementById("friendButton").innerHTML= "Unfollow";
+      else 
+        document.getElementById("friendButton").innerHTML= "Follow";
     }
     
   </script>
