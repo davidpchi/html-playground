@@ -48,15 +48,23 @@ h1{
   	<h1 class="profilename" id="profilename">name</h1>
     <img class="profilepic" id="profilepic" src="https://pbs.twimg.com/profile_images/2727160636/53951cf0287cdcd1c871fdf673ec5c89.jpeg" alt="Paris" style="width:40%">
     <div class="center">
-  	  <button onclick="closeModal()">Follow</button>
+  	  <button onclick="toggleFriendship()" id="friendButton">Follow</button>
       <button onclick="closeModal()">Close</button>
     </div>
-    <h2>This is the iteration 15</h2>
+    <h2>This is the iteration 18</h2>
   </div>
   <script>
     function closeModal() {
       window.parent.postMessage("closeModal", "*");
       console.log("attempting to close modal");
+    }
+    
+    function toggleFriendship() {
+      const isFriend = document.getElementById("friendButton").innerHTML;
+      if (isFriend === "Unfollow")
+        document.getElementById("friendButton").innerHTML= "Follow";
+      else 
+        document.getElementById("friendButton").innerHTML= "Unfollow";
     }
     
     const params = new URLSearchParams(window.location.search);
@@ -67,8 +75,13 @@ h1{
     }
     
     if (params.has("picture")) {
-      const name = params.get("picture");
-      document.getElementById("profilepic").src = name;
+      const picture = params.get("picture");
+      document.getElementById("profilepic").src = picture;
+    }
+    
+    if (params.has("isFriend")) {
+    	const isFriend = params.get("isFriend");
+      document.getElementById("friendButton").innerHTML= "Unfollow";
     }
     
   </script>
