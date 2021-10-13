@@ -24,11 +24,17 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin:32 auto;
-  display:block;
+  margin:16 auto;
+    display: block;
+    width: 40%;
 }
-  body {
-background-color: #1B1C1E
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+body {
+  background-color: #1B1C1E
 }
 h1{
   color: white;
@@ -39,8 +45,11 @@ h1{
   <div style="margin-top: 32">
   	<h1 class="profilename" id="profilename">name</h1>
     <img class="profilepic" id="profilepic" src="https://pbs.twimg.com/profile_images/2727160636/53951cf0287cdcd1c871fdf673ec5c89.jpeg" alt="Paris" style="width:40%">
-  	<button onclick="closeModal()">Close</button>
-    <h2>This is the iteration 11</h2>
+    <div class="center">
+  	  <button onclick="closeModal()">Close</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+    <h2>This is the iteration 12</h2>
   </div>
   <script>
     function closeModal() {
