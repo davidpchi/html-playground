@@ -22,12 +22,13 @@
   font-family: "Bahnschrift", sans-serif;
   background-color: #4CAF50; /* Green */
   border: none;
+  border-radius: 50%;
   color: white;
-  padding: 15px 32px;
+  padding: 16px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin:16;
+  margin: 16;
 }
 
 .bigButton {
@@ -58,6 +59,10 @@ body {
 h1{
   color: white;
 }
+.icon {
+  max-width: 32;
+  max-height: 32;
+}
 </style>
 </head>
   <body>
@@ -66,13 +71,12 @@ h1{
     <img class="profilepic" id="profilepic" src="https://pbs.twimg.com/profile_images/2727160636/53951cf0287cdcd1c871fdf673ec5c89.jpeg" alt="Paris" style="width:40%">
     <div class="center">
     	<div class="iconCollection">
-      	<button class="iconButton" onclick="toggleFriendship()" id="friendButton">Follow</button>
-      	<button class="iconButton" onclick="closeModal()">Close</button>
+      	<button class="iconButton" onclick="toggleFriendship()" id="friendButton"><img class="icon" src="https://www.emoji.co.uk/files/apple-emojis/smileys-people-ios/90-waving-hand-sign.png"/></button>      	<button class="iconButton" onclick="closeModal()">Close</button>
       </div>
   	  <button class="bigButton" onclick="toggleFriendship()" id="friendButton">Follow</button>
       <button class="bigButton" onclick="closeModal()">Close</button>
     </div>
-    <h2>This is the iteration 20</h2>
+    <h2>This is the iteration 21</h2>
   </div>
   <script>
     function closeModal() {
