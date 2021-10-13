@@ -71,15 +71,15 @@ h1{
     <img class="profilepic" id="profilepic" src="https://pbs.twimg.com/profile_images/2727160636/53951cf0287cdcd1c871fdf673ec5c89.jpeg" style="width:40%">
     <div class="center">
     	<div class="iconCollection">
-      	<button class="iconButton" onclick="closeModal()"><img class="icon" src="https://www.emoji.co.uk/files/apple-emojis/smileys-people-ios/90-waving-hand-sign.png"/></button>      	
-        <button class="iconButton" onclick="closeModal()"><img class="icon" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/hundred-points_1f4af.png"/></button>
-        <button class="iconButton" onclick="closeModal()"><img class="icon" src="https://www.emoji.com/wp-content/uploads/2018/12/emoji-icon-glossy-01-08-person-emotion-red-heart-72dpi-forPersonalUseOnly.png"/></button>  
-        <button class="iconButton" onclick="closeModal()"><img class="icon" src="https://cdn.shopify.com/s/files/1/1061/1924/files/Thumbs_Up_Sign_Emoji_Icon_ios10.png"/></button>  
+      	<button class="iconButton" onclick="sendEmoji1()"><img class="icon" src="https://www.emoji.co.uk/files/apple-emojis/smileys-people-ios/90-waving-hand-sign.png"/></button>      	
+        <button class="iconButton" onclick="sendEmoji2()"><img class="icon" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/hundred-points_1f4af.png"/></button>
+        <button class="iconButton" onclick="sendEmoji3()"><img class="icon" src="https://www.emoji.com/wp-content/uploads/2018/12/emoji-icon-glossy-01-08-person-emotion-red-heart-72dpi-forPersonalUseOnly.png"/></button>  
+        <button class="iconButton" onclick="sendEmoji4()"><img class="icon" src="https://cdn.shopify.com/s/files/1/1061/1924/files/Thumbs_Up_Sign_Emoji_Icon_ios10.png"/></button>  
       </div>
   	  <button class="bigButton" onclick="toggleFriendship()" id="friendButton">Follow</button>
       <button class="bigButton" onclick="closeModal()">Close</button>
     </div>
-    <h2>This is the iteration 21</h2>
+    <h2>This is the iteration 22</h2>
   </div>
   <script>
     function closeModal() {
@@ -94,6 +94,22 @@ h1{
         document.getElementById("friendButton").innerHTML= "Follow";
       else 
         document.getElementById("friendButton").innerHTML= "Unfollow";
+    }
+    
+    function sendEmoji1() {
+      window.parent.postMessage("sendEmoji1", "*");
+    }
+    
+    function sendEmoji2() {
+      window.parent.postMessage("sendEmoji2", "*");
+    }
+    
+    function sendEmoji3() {
+      window.parent.postMessage("sendEmoji3", "*");
+    }
+    
+    function sendEmoji4() {
+      window.parent.postMessage("sendEmoji4", "*");
     }
     
     const params = new URLSearchParams(window.location.search);
