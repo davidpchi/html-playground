@@ -61,6 +61,7 @@ h1{
     
     function toggleFriendship() {
       const isFriend = document.getElementById("friendButton").innerHTML;
+      window.parent.postMessage("toggleFriendship", "*");
       if (isFriend === "Unfollow")
         document.getElementById("friendButton").innerHTML= "Follow";
       else 
